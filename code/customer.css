@@ -1,0 +1,5 @@
+.bg {
+    opacity: 0.8;
+    box-shadow: 4, 4, 4, 4, #333;
+    cursor: pointer;
+}

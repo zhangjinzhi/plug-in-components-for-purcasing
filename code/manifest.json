@@ -1,0 +1,33 @@
+{
+    "name": "定时点击购买按钮",
+    "description": "定时点击购买按钮",
+    "icons": { "128": "icon.png" },
+    "version": "1.0",
+    "background": { "scripts": ["jquery.js", "background.js"] },
+    "browser_action": {
+        "name": "点击开始运行"
+    },
+    "content_scripts": [
+        //  {
+        //         "all_frames": false,
+        //         "js": ["jquery.js", "run.js"],
+        //         "matches": ["https://detail.ju.taobao.com/home.htm*"]
+        //     },
+        {
+            "all_frames": false,
+            "css": ["sweetalert2.min.css", "customer.css"],
+            "js": ["jquery.js", "sweetalert2.min.js"],
+            "matches": ["https://detail.tmall.com/item.htm*", "https://item.taobao.com/*"]
+        },
+        {
+            "all_frames": false,
+            "js": ["jquery.js", "buy.js"],
+            "matches": ["https://buy.tmall.com/*", "https://buy.taobao.com/*"]
+        }
+
+    ],
+    "manifest_version": 2,
+    "permissions": [
+        "tabs", "downloads", "*://*/*", "\u003Call_urls>", "webRequest", "webRequestBlocking", "cookies", "storage"
+    ]
+}
