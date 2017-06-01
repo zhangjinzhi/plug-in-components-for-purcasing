@@ -69,3 +69,65 @@ chrome.extension.onRequest.addListener( //背景监听扩展发送过来的信�
 
 
     });
+
+
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponseCallback)
+{
+    if(message.name == "action")
+    {
+         sendResponseCallback({cookie: document.cookie});
+     alert("has cookie");
+
+    }
+    else if(message.browserkey)
+    {
+     alert("no cookie");
+    }
+    sendResponse({code: 200})
+
+});
+
+
+/*
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+  console.log(sender.tab ? "from a content script:" + sender.tab.url : "from the extension")
+  if (request.action == "action") {
+    console.log("content已经把信息传da")
+    chrome.cookies.getAll({
+      url: sender.tab.url
+    }, function(cookies) {
+      cookies.forEach(function(cookie) {
+        if(cookie.httpOnly) {
+          console.log(cookie)
+        }
+      })
+    })
+    sendResponse({code: 200})
+  }
+})
+*/
+// chrome.extension.onRequest.addListener( //背景监听扩展发送过来的信息
+//     function(request, sender, sendResponse) {
+//         if (request == "action"){
+//             console.log("rrr");
+//             sendResponse(x);
+//             }
+
+//     });
+
+// chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+//   console.log(sender.tab ? "from a content script:" + sender.tab.url : "from the extension")
+//   if (request.action == "action") {
+//     chrome.cookies.getAll({
+//       url: sender.tab.url
+//     }, function(cookies) {
+//       cookies.forEach(function(cookie) {
+//         cookiesStore[cookie.name] = cookie.value
+//         if(cookie.httpOnly) {
+//           console.log(cookie)
+//         }
+//       })
+//     })
+//     sendResponse({code: 200})
+//   }
+// });

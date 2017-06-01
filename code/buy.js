@@ -7,3 +7,11 @@ setInterval(
 		$("a:contains('提交订单')")[0].click();
 	}
 }, 250);
+
+chrome.runtime.sendMessage({action: "action", function(resp) {
+	console.log("sssS")
+}});
+
+// chrome.extension.sendRequest("action",function(response) {
+// 	console.log("Ssss")
+// });

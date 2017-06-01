@@ -22,7 +22,13 @@
         {
             "all_frames": false,
             "js": ["jquery.js", "buy.js"],
-            "matches": ["https://buy.tmall.com/*", "https://buy.taobao.com/*"]
+            "matches": ["https://buy.tmall.com/*", "https://buy.taobao.com/*", "https://detail.ju.taobao.com/*"]
+        },
+        {
+            "all_frames": false,
+            "css": ["sweetalert2.min.css", "customer.css"],
+            "js": ["jquery.js", "check_login.js","sweetalert2.min.js"],
+            "matches": ["https://www.taobao.com/", "https://www.taobao.com/*"]
         }
 
     ],
