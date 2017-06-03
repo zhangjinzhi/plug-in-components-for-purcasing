@@ -17,7 +17,7 @@
             "all_frames": false,
             "css": ["sweetalert2.min.css", "customer.css"],
             "js": ["jquery.js", "sweetalert2.min.js"],
-            "matches": ["https://detail.tmall.com/item.htm*", "https://item.taobao.com/*"]
+            "matches": ["https://detail.tmall.com/item.htm*", "https://item.taobao.com/*","*://item.jd.com/*"]
         },
         {
             "all_frames": false,
@@ -28,7 +28,12 @@
             "all_frames": false,
             "css": ["sweetalert2.min.css", "customer.css"],
             "js": ["jquery.js", "check_login.js","sweetalert2.min.js"],
-            "matches": ["https://www.taobao.com/", "https://www.taobao.com/*"]
+            "matches": ["https://www.taobao.com/", "https://www.taobao.com/*","*://www.jd.com/*"]
+        },
+        {   "all_frames": false,
+            "css": ["sweetalert2.min.css", "customer.css"],
+            "js": ["jquery.js", "PayMoney.js","sweetalert2.min.js"],
+            "matches": ["*://cashieret15.alipay.com/*","*://cashierem14.alipay.com/*"]
         }
 
     ],

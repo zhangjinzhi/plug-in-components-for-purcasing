@@ -36,7 +36,7 @@ else{
     $(document.body).append(div);
     div.innerHTML = '<c style="display:none;">登陆状态监测</c><server style="width:200px;float:left;">登录状态</server><div class="timer">'+log_information+'</div>';
     div.id = "mydiv";
-    div.style = "font-family: '\5FAE\8F6F\96C5\9ED1',arial,'\5b8b\4f53';border-radius: 10px;background:rgba(60, 53, 48, 0.93);color:#FFe;font-size:20px;width:200px;font-weight:100;top:10px;left:10px;z-index:99999; position: fixed;padding-left:5px;";
+    div.style = "font-family: '\5FAE\8F6F\96C5\9ED1',arial,'\5b8b\4f53';border-radius: 10px;background:rgba(60, 53, 48, 0.93);color:#FFe;font-size:20px;width:200px;font-weight:100;top:100px;left:10px;z-index:99999; position: fixed;padding-left:5px;";
    $("#mydiv div").on("mouseover", function() {
         $(this).addClass("bg");
     });
