@@ -13,7 +13,7 @@ var PaySubmitBtn = document.getElementById("J_authSubmit");
 // var sixDigitPassword = document.getElementsByClassName("sixDigitPassword").childNodes.length;
 // console.log(sixDigitPassword);
 
-PayPasswordInput.value = "199411";
+PayPasswordInput.value = "";//填写自己的支付密码
 PaySubmitBtn.click();
 console.log("完成自动支付");
 
